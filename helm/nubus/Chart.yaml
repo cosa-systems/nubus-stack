@@ -4,7 +4,7 @@ apiVersion: "v2"
 name: "nubus"
 description: "Univention Nubus"
 type: "application"
-version: "1.0.0"
+version: "1.19.2-cosa.2"
 
 dependencies:
   - name: "nubus-common"
@@ -96,8 +96,11 @@ dependencies:
 
   - name: "stack-data-ums"
     alias: "nubusStackDataUms"
-    repository: "oci://artifacts.software-univention.de/nubus/charts"
-    version: "0.103.3"
+    # cosa fork of stack-data-ums: contextUsers open-map + per-user existingSecret
+    # knobs, rebased on the upstream 0.103.3 that nubus v1.21.0 bundles.
+    # Source: https://github.com/cosa-systems/ums-stack-data/tree/cosa-deploy
+    repository: "oci://ghcr.io/cosa-systems"
+    version: "0.103.3-cosa.1"
     condition: "nubusStackDataUms.enabled"
 
   - name: "twofa-helpdesk"
