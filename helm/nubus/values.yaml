@@ -534,6 +534,13 @@ nubusStackDataUms:
   nameOverride: "stack-data-ums"
   enabled: true
   resources: *nubusDevelopmentResources
+  # Controls emission of the <release>-nubus-credentials Secret that holds
+  # `administrator_password`. With `create: false` the chart does not render
+  # that Secret, so no credential is baked into the manifests; provide a
+  # Secret of the same name + key out-of-band (e.g. an external secret
+  # manager / SOPS-encrypted manifest). Defaults to true (chart emits it).
+  administratorPasswordSecret:
+    create: true
   udm:
     auth:
       existingSecret:
