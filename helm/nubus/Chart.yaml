@@ -4,7 +4,7 @@ apiVersion: "v2"
 name: "nubus"
 description: "Univention Nubus"
 type: "application"
-version: "1.19.2-cosa.2"
+version: "1.21.0-cosa.1"
 
 dependencies:
   - name: "nubus-common"
