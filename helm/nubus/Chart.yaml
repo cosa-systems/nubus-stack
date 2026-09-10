@@ -4,7 +4,7 @@ apiVersion: "v2"
 name: "nubus"
 description: "Univention Nubus"
 type: "application"
-version: "1.0.0"
+version: "1.21.0-cosa.2"
 
 dependencies:
   - name: "nubus-common"
@@ -45,8 +45,8 @@ dependencies:
 
   - name: "portal-consumer"
     alias: "nubusPortalConsumer"
-    repository: "oci://artifacts.software-univention.de/nubus/charts"
-    version: "0.94.15"
+    repository: "oci://ghcr.io/cosa-systems"
+    version: "0.94.15-cosa.1"
     condition: "nubusPortalConsumer.enabled"
 
   - name: "portal-server"
@@ -58,15 +58,15 @@ dependencies:
   # selfservice related chart(s)
   - name: "selfservice-consumer"
     alias: "nubusSelfServiceConsumer"
-    repository: "oci://artifacts.software-univention.de/nubus/charts"
-    version: "0.20.12"
+    repository: "oci://ghcr.io/cosa-systems"
+    version: "0.20.12-cosa.1"
     condition: "nubusSelfServiceConsumer.enabled"
 
   # provisioning related chart(s)
   - name: "provisioning"
     alias: "nubusProvisioning"
-    repository: "oci://artifacts.software-univention.de/nubus/charts"
-    version: "0.70.22"
+    repository: "oci://ghcr.io/cosa-systems"
+    version: "0.70.22-cosa.1"
     condition: "nubusProvisioning.enabled"
 
   - name: "udm-listener"
@@ -96,8 +96,8 @@ dependencies:
 
   - name: "stack-data-ums"
     alias: "nubusStackDataUms"
-    repository: "oci://artifacts.software-univention.de/nubus/charts"
-    version: "0.103.3"
+    repository: "oci://ghcr.io/cosa-systems"
+    version: "0.103.3-cosa.2"
     condition: "nubusStackDataUms.enabled"
 
   - name: "twofa-helpdesk"
