@@ -6,7 +6,7 @@ global:
   nubusDeployment: true
   # Automatically set by CI during packaging.
   # -- The Nubus umbrella chart version.
-  nubusChartVersion: "0.0.0"
+  nubusChartVersion: "1.23.0"
   secrets:
     # -- Master password from which other passwords are derived.
     masterPassword: ""
